@@ -33,6 +33,7 @@ function rendershade(){
 	let canvas = rendercalc.canvas;
 
   document.getElementById('tdshadegen').appendChild(rendercalc.canvas);
+	document.getElementById('shadegenbm').innerHTML=("Shade rendered in " + (new Date()-go) + " ms");
 	console.log('shade rendered in',new Date()-go,'ms');
 }
 

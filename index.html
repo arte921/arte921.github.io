@@ -10,11 +10,15 @@
 			</tr><tr>
 				<td>
 					<input type='range' id='shadegenslider' oninput ='window.requestAnimationFrame(rendershade)' min='0' max='255' value='50'>
-					<button id='save' onClick='save()'>download</button><br>
-					<a href='mandelbrot/index.html'>gpu accelerated mandelbrot renderer</a><br>
-					<a href='logmap/index.html'>logmap renderer</a><br>
-					<a href='shadegen/index.html'>gpu accelerated shade generator</a><br>
-					<a href='https://github.com/arte921'>my github</a>
+					<button id='save' onClick='save()'>download</button><br><br>
+					<a href='mandelbrot/index.html'>gpu accelerated mandelbrot renderer</a><br><br>
+					<a href='logmap/index.html'>logmap renderer</a><br><br>
+					<a href='shadegen/index.html'>gpu accelerated shade generator</a><br><br>
+					<a href='https://github.com/arte921'>my github</a><br><br>
+					<p id='mandelbrotbm'></p>
+					<p id='logmapbm'></p>
+					<p id='shadegenbm'></p>
+					<p id='resolution'></p>
 				</td><td id='tdshadegen'></td>
 			</tr>
 		</table>
