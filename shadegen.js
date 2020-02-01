@@ -22,6 +22,10 @@ let rendercalc = savegpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
     this.color(this.thread.x/mcbwidth,this.thread.y/mcbwidth,seed);
 }).setOutput([mcbwidth,mcbheight]).setGraphical(true);
 
+function requestframe(){
+	window.requestAnimationFrame(rendershade);
+}
+
 function rendershade(){
   seed=document.getElementById('shadegenslider').value/255;
   rendercalc(mcbwidth,mcbheight,seed,dist);
