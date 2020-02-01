@@ -8,9 +8,9 @@ let mcbwidth = window.innerWidth/2;
 canvas.width = mcbwidth;
 canvas.height = mcbheight;
 
-let cx = 3.4;
-let cy = 0.6;
-let rx = 0.75;
+var cx = 3;
+var cy = 0.5;
+var rx = 1.1;
 let ry = rx*mcbheight/mcbwidth;
 
 let xres = 2*rx/mcbwidth;
@@ -23,6 +23,7 @@ function plot(mx,my){
 }
 let go = new Date();
 x=cx-rx;
+
 y=0.5;
 while (x<=cx+rx){
 	for(i=0;i<100;i++){
