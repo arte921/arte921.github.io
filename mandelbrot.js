@@ -73,8 +73,6 @@ const calc = gpu.createKernel(function(mcbwidth,mcbheight,rmin,rmax,imin,imax,lo
 
 
 function render(rcenter,icenter,br){
-  //document.getElementById('mainframe').removeChild(document.getElementById('mainframe').childNodes[0]);
-
   let go;
   let finish;
   go=new Date();
@@ -94,8 +92,6 @@ function render(rcenter,icenter,br){
 
   calc(mcbwidth,mcbheight,rmin,rmax,imin,imax,loops,colorfactor);
   let canvas = calc.canvas;
-	canvas.width=mcbwidth;
-	canvas.height=mcbheight;
 
   document.getElementById('tdmandelbrot').appendChild(canvas);
 
