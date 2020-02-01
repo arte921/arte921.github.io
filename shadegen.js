@@ -9,7 +9,7 @@ let dist = 0;
 
 
 const gpu = new GPU();
-let calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
+calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
     this.color(this.thread.x/mcbwidth,this.thread.y/mcbheight,seed);
 }).setOutput([mcbwidth,mcbheight]).setGraphical(true);
 
