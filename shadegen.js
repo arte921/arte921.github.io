@@ -33,7 +33,7 @@ function rendershade(){
 	let canvas = rendercalc.canvas;
 
   document.getElementById('tdshadegen').appendChild(rendercalc.canvas);
-	document.getElementById('shadegenbm').innerHTML=("Gradient rendered in " + (new Date()-go) + " ms");
+	document.getElementById('shadegenbm').innerHTML=("Gradient rendered in " + (new Date()-go) + " ms with a blue value of " + (Math.round(seed*1000)/1000));
 }
 
 function save(){
