@@ -8,10 +8,13 @@
 			<tr>
 				<td id='tdmandelbrot'></td><td id='tdlogmap'><canvas id='logmapcanvas'></canvas></td>
 			</tr><tr>
-				<td></td><td id='tdshadegen'>
+				<td>
 					<input type='range' id='shadegenslider' onchange ='rendershade()' min='0' max='255' value='50'>
-    			<button id='save' onClick='save()'>download</button>
-				</td>
+					<button id='save' onClick='save()'>download</button><br>
+					<a href='mandelbrot/index.html'>gpu accelerated mandelbrot renderer</a><br>
+					<a href='logmap/index.html'>logmap renderer</a><br>
+					<a href='shadegen/index.html'>gpu accelerated shade generator</a><br>
+				</td><td id='tdshadegen'></td>
 			</tr>
 		</table>
 		<script src="mandelbrot.js"></script>
