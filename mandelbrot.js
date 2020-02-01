@@ -92,7 +92,7 @@ function render(rcenter,icenter,br){
   calc(mcbwidth,mcbheight,rmin,rmax,imin,imax,loops,colorfactor);
   const canvas = calc.canvas;
 
-  document.getElementById('mainframe').appendChild(canvas);
+  document.getElementById('tdmandelbrot').appendChild(canvas);
 
   finish = new Date();
   console.log(finish-go);
