@@ -19,10 +19,12 @@ let loops=10000000;
 
 
 function logmouse(clickevent){
-  rcenter=clickevent.clientX/mcbwidth*br+rmin;
-  icenter=(mcbheight-clickevent.clientY)/mcbheight*bi+imin;
-  br /= zoomfactor;
-  render(rcenter,icenter,br);
+	if(clickevent.clientX<mcbwidth && clickevent.clientY<mcbheight){
+		rcenter=clickevent.clientX/mcbwidth*br+rmin;
+		icenter=(mcbheight-clickevent.clientY)/mcbheight*bi+imin;
+		br /= zoomfactor;
+		render(rcenter,icenter,br);
+	}
 }
 
 document.addEventListener("click",logmouse);
