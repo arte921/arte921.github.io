@@ -27,11 +27,13 @@ function requestframe(){
 }
 
 function rendershade(){
+	let go = new Date();
   seed=document.getElementById('shadegenslider').value/255;
   rendercalc(mcbwidth,mcbheight,seed,dist);
 	let canvas = rendercalc.canvas;
 
   document.getElementById('tdshadegen').appendChild(rendercalc.canvas);
+	console.log('shade rendered in',new Date()-go,'ms');
 }
 
 function save(){
@@ -45,5 +47,7 @@ function save(){
   link.click();
 }
 
+
 rendershade();
+
 }

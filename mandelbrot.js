@@ -96,7 +96,7 @@ function render(rcenter,icenter,br){
   document.getElementById('tdmandelbrot').appendChild(canvas);
 
   finish = new Date();
-  console.log(finish-go);
+  console.log("mandelbrot rendered in",finish-go,"ms");
 
 }
 render(rcenter,icenter,br);

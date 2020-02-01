@@ -32,5 +32,5 @@ while (x<=cx+rx){
 	}
 	x += xres;
 }
-console.log(new Date()-go);
+console.log("logmap rendered in",new Date()-go,"ms");
 }
