@@ -1,5 +1,5 @@
-var mcbwidth = window.innerWidth;
-var mcbheight = window.innerHeight;
+var mcbwidth = window.innerWidth*0.5;
+var mcbheight = window.innerHeight*0.5;
 
 var rcenter = -0.7
 var icenter = 0;
