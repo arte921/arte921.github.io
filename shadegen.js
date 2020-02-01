@@ -2,8 +2,8 @@
 let screenwidth = window.screen.width;
 let screenheight = window.screen.height;
 
-let mcbheight = window.innerHeight/2;
-let mcbwidth = window.innerWidth/2;
+let mcbwidth = document.body.clientWidth/2;
+let mcbheight = document.body.clientHeight/2;
 
 let seed = Math.random();
 document.getElementById('shadegenslider').value = seed*255;

@@ -3,8 +3,8 @@ let pxx,pxy,x,y,i;
 
 let canvas = document.getElementById('logmapcanvas');
 let ctx = canvas.getContext('2d');
-let mcbheight = window.innerHeight/2;
-let mcbwidth = window.innerWidth/2;
+let mcbwidth = document.body.clientWidth/2;
+let mcbheight = document.body.clientHeight/2;
 canvas.width = mcbwidth;
 canvas.height = mcbheight;
 
