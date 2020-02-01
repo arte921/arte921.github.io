@@ -11,7 +11,7 @@ let dist = 0;
 
 const gpu = new GPU();
 let calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
-    this.color(this.thread.x/mcbwidth,this.thread.y/mcbheight,seed);
+    this.color(this.thread.x/mcbwidth*4,this.thread.y/mcbheight*4,seed);
 }).setOutput([mcbwidth,mcbheight]).setGraphical(true);
 
 function rendershade(){
