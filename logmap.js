@@ -5,7 +5,7 @@ let canvas = document.getElementById('logmapcanvas');
 let ctx = canvas.getContext('2d');
 let mcbheight = window.innerHeight/2;
 let mcbwidth = window.innerWidth/2;
-canvas.width = mcbwidth
+canvas.width = mcbwidth;
 canvas.height = mcbheight;
 
 let cx = 3.4;

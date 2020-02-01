@@ -17,6 +17,9 @@ let calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
 function rendershade(){
   seed=document.getElementById('shadegenslider').value/255;
   calc(mcbwidth,mcbheight,seed,dist);
+	let canvas = calc.canvas;
+	canvas.width=mcbwidth;
+	canvas.height=mcbheight;
   document.getElementById('tdshadegen').appendChild(calc.canvas);
 }
 
