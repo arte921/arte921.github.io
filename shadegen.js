@@ -1,5 +1,6 @@
-mcbwidth = window.screen.width;
-mcbheight = window.screen.height;
+{
+let mcbwidth = window.screen.width;
+let mcbheight = window.screen.height;
 
 let seed = Math.random();
 document.getElementById('slider').value = seed*255;
@@ -9,7 +10,7 @@ let dist = 0;
 
 
 const gpu = new GPU();
-calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
+let calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
     this.color(this.thread.x/mcbwidth,this.thread.y/mcbheight,seed);
 }).setOutput([mcbwidth,mcbheight]).setGraphical(true);
 
@@ -31,3 +32,4 @@ function save(){
 }
 
 rendershade();
+}

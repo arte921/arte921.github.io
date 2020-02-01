@@ -1,3 +1,4 @@
+{
 let mcbwidth = window.innerWidth/2;
 let mcbheight = window.innerHeight/2;
 
@@ -99,3 +100,4 @@ function render(rcenter,icenter,br){
 
 }
 render(rcenter,icenter,br);
+}

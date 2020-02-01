@@ -1,9 +1,10 @@
+{
 let pxx,pxy,x,y,i;
 
 let canvas = document.getElementById('logmapcanvas');
 let ctx = canvas.getContext('2d');
-mcbheight = window.innerHeight/2;
-mcbwidth = window.innerWidth/2;
+let mcbheight = window.innerHeight/2;
+let mcbwidth = window.innerWidth/2;
 canvas.width = mcbwidth
 canvas.height = mcbheight;
 
@@ -31,3 +32,4 @@ while (x<=cx+rx){
 	x += xres;
 }
 console.log(new Date()-go);
+}
