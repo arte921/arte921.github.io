@@ -3,7 +3,7 @@ let mcbwidth = window.screen.width;
 let mcbheight = window.screen.height;
 
 let seed = Math.random();
-document.getElementById('slider').value = seed*255;
+document.getElementById('shadegenslider').value = seed*255;
 let growfactor = 0.01;
 
 let dist = 0;
