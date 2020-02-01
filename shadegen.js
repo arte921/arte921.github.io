@@ -1,5 +1,5 @@
-let mcbwidth = window.screen.width;
-let mcbheight = window.screen.height;
+mcbwidth = window.screen.width;
+mcbheight = window.screen.height;
 
 let seed = Math.random();
 document.getElementById('slider').value = seed*255;
