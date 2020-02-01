@@ -1,19 +1,19 @@
-var mcbwidth = window.innerWidth/2;
-var mcbheight = window.innerHeight/2;
+let mcbwidth = window.innerWidth/2;
+let mcbheight = window.innerHeight/2;
 
-var rcenter = -0.7
-var icenter = 0;
-var br = 2.4;
-var zoomfactor = 1.5;
+let rcenter = -0.7
+let icenter = 0;
+let br = 2.4;
+let zoomfactor = 1.5;
 
-var colorfactor = 1000;
+let colorfactor = 1000;
 
-var bi;
-var rmin;
-var imin;
-var imax;
-var rmax;
-var loops=10000000;
+let bi;
+let rmin;
+let imin;
+let imax;
+let rmax;
+let loops=10000000;
 
 
 
@@ -29,23 +29,23 @@ document.addEventListener("click",logmouse);
 const gpu = new GPU();
 const calc = gpu.createKernel(function(mcbwidth,mcbheight,rmin,rmax,imin,imax,loops,colorfactor){
 
-  var ba = 0;
-  var bb = 0;
-  var ax = 0;
-  var bx = 0;
+  let ba = 0;
+  let bb = 0;
+  let ax = 0;
+  let bx = 0;
 
-  var br = rmax - rmin;
-  var bi = imax - imin;
+  let br = rmax - rmin;
+  let bi = imax - imin;
 
-  var rres = br/mcbwidth;
-  var ires = bi/mcbheight;
+  let rres = br/mcbwidth;
+  let ires = bi/mcbheight;
 
   const ac=rres*this.thread.x + rmin;
   const bc=ires*this.thread.y + imin;
 
-  var gs = 0;
+  let gs = 0;
 
-  var g=0;
+  let g=0;
   while(g<loops){
     if(Math.sqrt(Math.pow(ax,2)+Math.pow(bx,2))>2){
 
@@ -72,8 +72,8 @@ const calc = gpu.createKernel(function(mcbwidth,mcbheight,rmin,rmax,imin,imax,lo
 function render(rcenter,icenter,br){
   //document.getElementById('mainframe').removeChild(document.getElementById('mainframe').childNodes[0]);
 
-  var go;
-  var finish;
+  let go;
+  let finish;
   go=new Date();
 
   bi = br*mcbheight/mcbwidth;
@@ -84,8 +84,8 @@ function render(rcenter,icenter,br){
   imin = icenter-bi/2;
   imax = icenter+bi/2;
 
-  var rres = br/mcbwidth;
-  var ires = bi/mcbheight;
+  let rres = br/mcbwidth;
+  let ires = bi/mcbheight;
 
 
 

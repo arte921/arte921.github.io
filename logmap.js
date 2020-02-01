@@ -1,26 +1,26 @@
-var pxx,pxy,x,y,i;
+let pxx,pxy,x,y,i;
 
-var canvas = document.getElementById('logmapcanvas');
-var ctx = canvas.getContext('2d');
-var mcbheight = window.innerHeight/2;
-var mcbwidth = window.innerWidth/2;
+let canvas = document.getElementById('logmapcanvas');
+let ctx = canvas.getContext('2d');
+let mcbheight = window.innerHeight/2;
+let mcbwidth = window.innerWidth/2;
 canvas.width = mcbwidth
 canvas.height = mcbheight;
 
-var cx = 3.4;
-var cy = 0.6;
-var rx = 0.75;
-var ry = rx*mcbheight/mcbwidth;
+let cx = 3.4;
+let cy = 0.6;
+let rx = 0.75;
+let ry = rx*mcbheight/mcbwidth;
 
-var xres = 2*rx/mcbwidth;
-var yres = 2*ry/mcbheight;
+let xres = 2*rx/mcbwidth;
+let yres = 2*ry/mcbheight;
 
 function plot(mx,my){
 	pxx = (mx-(cx-rx))/(2*rx)*mcbwidth;
 	pxy = mcbheight-((my-(cy-ry))/(2*ry)*mcbheight);
 	ctx.fillRect(pxx,pxy,1,1);
 }
-var go = new Date();
+let go = new Date();
 x=cx-rx;
 y=0.5;
 while (x<=cx+rx){
