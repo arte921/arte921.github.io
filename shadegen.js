@@ -2,8 +2,8 @@
 let screenwidth = window.screen.width;
 let screenheight = window.screen.height;
 
-let mcbheight = window.innerHeight/2;
-let mcbwidth = window.innerWidth/2;
+let mcbwidth = document.body.clientWidth/2;
+let mcbheight = document.body.clientHeight/2;
 
 let seed = Math.random();
 document.getElementById('shadegenslider').value = seed*255;
@@ -27,11 +27,13 @@ function requestframe(){
 }
 
 function rendershade(){
+	let go = new Date();
   seed=document.getElementById('shadegenslider').value/255;
   rendercalc(mcbwidth,mcbheight,seed,dist);
 	let canvas = rendercalc.canvas;
 
   document.getElementById('tdshadegen').appendChild(rendercalc.canvas);
+	console.log('shade rendered in',new Date()-go,'ms');
 }
 
 function save(){
@@ -45,5 +47,7 @@ function save(){
   link.click();
 }
 
+
 rendershade();
+
 }

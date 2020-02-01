@@ -1,6 +1,6 @@
 {
-let mcbwidth = window.innerWidth/2;
-let mcbheight = window.innerHeight/2;
+let mcbwidth = document.body.clientWidth/2;
+let mcbheight = document.body.clientHeight/2;
 
 let rcenter = -0.7
 let icenter = 0;
@@ -96,7 +96,7 @@ function render(rcenter,icenter,br){
   document.getElementById('tdmandelbrot').appendChild(canvas);
 
   finish = new Date();
-  console.log(finish-go);
+  console.log("mandelbrot rendered in",finish-go,"ms");
 
 }
 render(rcenter,icenter,br);
