@@ -35,5 +35,5 @@ while (x<=cx+rx){
 	x += xres;
 }
 document.getElementById('logmapbm').innerHTML=("Logmap rendered in " + (new Date()-go) + " ms at " + it + " iterations.");
-document.getElementById('resolution').innerHTML=("All renders are at a " + mcbwidth + " x " + mcbheight + " resolution.<br><br>The downloaded shade will be at a " + window.screen.width + " x " + window.screen.height + " resolution.");
+document.getElementById('resolution').innerHTML=("All renders are at a " + mcbwidth + " x " + mcbheight + " resolution.<br><br>The downloaded gradient will be at a " + window.screen.width + " x " + window.screen.height + " resolution.");
 }
