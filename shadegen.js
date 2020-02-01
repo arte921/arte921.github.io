@@ -9,24 +9,28 @@ let growfactor = 0.01;
 let dist = 0;
 
 
-const gpu = new GPU();
-let calc = gpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
+const savegpu = new GPU();
+let savecalc = savegpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
     this.color(this.thread.x/mcbwidth,this.thread.y/mcbheight,seed);
 }).setOutput([mcbwidth,mcbheight]).setGraphical(true);
 
+const rendergpu = new GPU();
+let rendercalc = savegpu.createKernel(function(mcbwidth,mcbheight,seed,dist){
+    this.color(this.thread.x/mcbwidth,this.thread.y/mcbheight,seed);
+}).setOutput([Math.round(mcbwidth/2),Math.round(mcbheight/2)]).setGraphical(true);
+
 function rendershade(){
   seed=document.getElementById('shadegenslider').value/255;
-  calc(mcbwidth,mcbheight,seed,dist);
-	let canvas = calc.canvas;
-	canvas.width=mcbwidth;
-	canvas.height=mcbheight;
-  document.getElementById('tdshadegen').appendChild(calc.canvas);
+  savecalc(mcbwidth,mcbheight,seed,dist);
+	let canvas = savecalc.canvas;
+
+  document.getElementById('tdshadegen').appendChild(savecalc.canvas);
 }
 
 function save(){
 	seed=document.getElementById('shadegenslider').value/255;
-  calc(mcbwidth,mcbheight,seed,dist);
-  png = calc.canvas.toDataURL('image/png');
+  savecalc(mcbwidth,mcbheight,seed,dist);
+  png = savecalc.canvas.toDataURL('image/png');
 
   let link = document.createElement('a')
   link.download = seed + '.png';
