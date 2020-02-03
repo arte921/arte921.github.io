@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>helo</title>
+		<link rel='stylesheet' href='style.css'></link>
 		<script src='libs/gpu-browser.min.js'></script>
 	</head>
 	<body>
@@ -10,17 +11,19 @@
 				<td id='tdlogmap'><canvas id='logmapcanvas'></canvas></td>
 			</tr><tr>
 				<td>
+					<br>
 					<input type='range' id='shadegenslider' oninput ='window.requestAnimationFrame(rendershade)' min='0' max='255' value='50'>
 					<button id='save' onClick='save()'>download</button>
+					<br><br>
 					<p id='mandelbrotbm'></p>
 					<p id='logmapbm'></p>
 					<p id='shadegenbm'></p>
 					<p id='resolution'></p>
 					<p>The fist renders of the Mandelbrot set and the gradient will take longer than the succeeding, because the gpu kernel has to be compiled at the first render.</p>
-
-					<a href='mandelbrot/index.html'>gpu accelerated mandelbrot renderer</a><br><br>
-					<a href='logmap/index.html'>logmap renderer</a><br><br>
-					<a href='shadegen/index.html'>gpu accelerated gradient generator</a><br><br>
+					<br>
+					<a href='mandelbrot/index.html'>gpu accelerated mandelbrot renderer</a><br>
+					<a href='logmap/index.html'>logmap renderer</a><br>
+					<a href='shadegen/index.html'>gpu accelerated gradient generator</a><br>
 					<a href='https://github.com/arte921'>my github</a>
 				</td><td id='tdshadegen'></td>
 			</tr>
