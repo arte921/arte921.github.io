@@ -39,7 +39,7 @@ function draw(x,y,realy){
   a=x/mcbwidth*500-200;
   b=-y/mcbheight*500+250;
   if(realy && b != 0){
-    ctx.fillText(Math.round(a) + ' + ' + Math.round(b) + 'i%',0,Math.round(mcbwidth/20));
+    ctx.fillText(Math.round(a) + ' + ' + Math.round(b) + 'i',0,Math.round(mcbwidth/20));
   }else{
     ctx.fillText(Math.round(a) + '%',0,Math.round(mcbwidth/20));
   }
