@@ -57,7 +57,7 @@ document.onmousemove=function(event){
   if(mousedown){
     x=event.offsetX;
     y=event.offsetY;
-    if(x>xo && x<xo+bw && y<yo+10 && y>yo-10){
+    if(x>xo && x<xo+bw && y<yo+bw/10 && y>yo-bw/10){
       draw(x,yo,false);
     }else{
       draw(x,y,true);
