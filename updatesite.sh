@@ -4,5 +4,5 @@ cd "$1"
 rm -rf .git
 cd ..
 git stage *
-git commit -m "updated $1 using updatesite.sh"
+git commit -m "updated $1 using script"
 git push
