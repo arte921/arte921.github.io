@@ -31,7 +31,7 @@ canvas.addEventListener('click',function(event){
   let drawx = x*size;
   let drawy = y*size;
 
-  let index = x*yw+(yw-1)-y;
+  let index = xw*yw-(x*yw+(yw-1)-y);
   console.log(index);
   if(zo[index]!=1){
     zo[index] = 1;
