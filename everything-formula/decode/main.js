@@ -20,11 +20,16 @@ for(let h=0;h<=xw;h++){
 for(let v=0;v<=yw;v++){
   ctx.fillRect(0,v*size,xw*size,1);
 }
+
 function floor(inp){
   return inp - inp % BigInt(1);
 }
+function mod(b,s){
+  return b % s;
+}
 
 function render(){
+  console.log('begin');
   let xwb = BigInt(xw);
   let ywb = BigInt(yw);
   let drawx,drawy;
@@ -32,14 +37,20 @@ function render(){
   let ymax = BigInt(document.getElementById('input').value) + ywb;
 
 
-  for(let x=BigInt(0);x<xw;x++){
+  for(let x=0;x<xw;x++){
     for(let y=ymin;y<ymax;y++){
-      if(BigInt(1)<BigInt(2)*(floor(floor(y/BigInt(17))*(BigInt(2) ** BigInt(17)*floor(x)-(floor(y) % BigInt(17))) % BigInt(2)) )) {
-        drawx = x*BigInt(size);
-        drawy = y*BigInt(size);
+      console.log(floor(mod(floor(y/BigInt(17)) / BigInt(2)**(-(BigInt(-17*Math.floor(x))-mod(floor(y),BigInt(17)))),BigInt(2))));
+      if(
+        1/2 < floor(mod(floor(y/BigInt(17)) / BigInt(2)**(-(BigInt(-17*Math.floor(x))-mod(floor(y),BigInt(17)))),BigInt(2)))
+      ) {
+
+        drawx = (xw-x-1)*size;
+        drawy = (Number(y-ymin))*size;
+        console.log(drawx,drawy,size,size);
         ctx.fillRect(drawx,drawy,size,size);
       }
     }
   }
+  console.log('end');
 }
 render();
