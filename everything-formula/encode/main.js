@@ -31,7 +31,7 @@ canvas.addEventListener('click',function(event){
   let drawx = x*size;
   let drawy = y*size;
 
-  let index = (x*yw+(yw-1)-y);
+  let index = x*yw+(yw-1)-y;
   console.log(index);
   if(zo[index]!=1){
     zo[index] = 1;
@@ -40,5 +40,5 @@ canvas.addEventListener('click',function(event){
     zo[index] = 0;
     ctx.clearRect(drawx+1,drawy+1,size-1,size-1);
   }
-  document.getElementById('output').innerHTML = bigInt(zo.join(''),2).toString();
+  document.getElementById('output').innerHTML = (BigInt('0b' + zo.join(''))*BigInt(17)).toString();
 });

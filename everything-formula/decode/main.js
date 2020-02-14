@@ -14,12 +14,19 @@ var mcbheight = yw*size+1;
 canvas.width=mcbwidth;
 canvas.height=mcbheight;
 
-for(let h=0;h<=xw;h++){
-  ctx.fillRect(h*size,0,1,yw*size);
+function clear(){
+  ctx.clearRect(0,0,mcbwidth,mcbheight);
+
+  for(let h=0;h<=xw;h++){
+    ctx.fillRect(h*size,0,1,yw*size);
+  }
+
+  for(let v=0;v<=yw;v++){
+    ctx.fillRect(0,v*size,xw*size,1);
+  }
 }
-for(let v=0;v<=yw;v++){
-  ctx.fillRect(0,v*size,xw*size,1);
-}
+
+clear();
 
 function floor(inp){
   return inp - inp % BigInt(1);
@@ -30,6 +37,7 @@ function mod(b,s){
 
 function render(){
   console.log('begin');
+  clear();
   let xwb = BigInt(xw);
   let ywb = BigInt(yw);
   let drawx,drawy;
@@ -39,18 +47,14 @@ function render(){
 
   for(let x=0;x<xw;x++){
     for(let y=ymin;y<ymax;y++){
-      console.log(floor(mod(floor(y/BigInt(17)) / BigInt(2)**(-(BigInt(-17*Math.floor(x))-mod(floor(y),BigInt(17)))),BigInt(2))));
       if(
         1/2 < floor(mod(floor(y/BigInt(17)) / BigInt(2)**(-(BigInt(-17*Math.floor(x))-mod(floor(y),BigInt(17)))),BigInt(2)))
       ) {
-
         drawx = (xw-x-1)*size;
         drawy = (Number(y-ymin))*size;
-        console.log(drawx,drawy,size,size);
         ctx.fillRect(drawx,drawy,size,size);
       }
     }
   }
-  console.log('end');
 }
 render();
