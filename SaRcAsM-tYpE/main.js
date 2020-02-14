@@ -16,7 +16,5 @@ function update(){
     }
     break;
   }
-
   document.getElementById('output').innerHTML = output;
-
 }
