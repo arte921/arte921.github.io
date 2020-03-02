@@ -1,9 +1,15 @@
 <html>
+  <head>
+    <style>
+      #input{
+        width: 100%
+      }
+    </style>
+  </head>
   <body>
     <canvas id='canvas'></canvas>
     <br />
-    <input id='input' type='text'></input>
-    <button onClick='render()'>plot</button>
+    <input id='input' oninput="render()" type='text'></input>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
