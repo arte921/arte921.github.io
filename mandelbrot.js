@@ -69,9 +69,6 @@ const calc = gpu.createKernel(function(mcbwidth,mcbheight,rmin,rmax,imin,imax,lo
 }).setOutput([mcbwidth,mcbheight]).setGraphical(true);
 
 
-
-
-
 function render(rcenter,icenter,br){
   let go;
   let finish;

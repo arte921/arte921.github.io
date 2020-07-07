@@ -7,9 +7,12 @@
 	</head>
 	<body>
 		<table>
+			<colgroup>
+				<col id="col">
+			</colgroup>
 			<tr>
 				<td id='tdmandelbrot'></td>
-				<td id='tdlogmap'><canvas id='logmapcanvas'></canvas></td>
+				<td><canvas id="misscanvas"></canvas><td>
 			</tr><tr>
 				<td>
 					<br>
@@ -20,6 +23,7 @@
 					<p id='logmapbm'></p>
 					<p id='shadegenbm'></p>
 					<p id='resolution'></p>
+					<p id='misstime'></p>
 					<p>The fist renders of the Mandelbrot set and the gradient will take longer than the succeeding, because the gpu kernel has to be compiled at the first render.</p>
 					<br>
 					<table>
@@ -46,9 +50,12 @@
 				</td><td id='tdshadegen'></td>
 			</tr>
 		</table>
-
 		<script src="shadegen.js"></script>
 		<script src="mandelbrot.js"></script>
-		<script src="logmap.js"></script>
+		<script src="miss.js"></script>
+
+		<script>
+			document.getElementById("col").width = document.body.clientWidth/2 - 3
+		</script>
 	</body>
 </html>
