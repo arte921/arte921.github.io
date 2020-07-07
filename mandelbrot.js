@@ -1,6 +1,6 @@
 {
-let mcbwidth = document.body.clientWidth/2;
-let mcbheight = document.body.clientHeight/2;
+let mcbwidth = document.body.clientWidth/2 - 5;
+let mcbheight = document.body.clientHeight/2 - 5;
 
 let rcenter = -0.7
 let icenter = 0;

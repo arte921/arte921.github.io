@@ -2,8 +2,8 @@
 let screenwidth = window.screen.width;
 let screenheight = window.screen.height;
 
-let mcbwidth = document.body.clientWidth/2;
-let mcbheight = document.body.clientHeight/2;
+let mcbwidth = document.body.clientWidth/2 - 5;
+let mcbheight = document.body.clientHeight/2 - 5;
 
 let seed = Math.random();
 document.getElementById('shadegenslider').value = seed*255;
@@ -33,7 +33,7 @@ function rendershade(){
 	let canvas = rendercalc.canvas;
 
   document.getElementById('tdshadegen').appendChild(rendercalc.canvas);
-	document.getElementById('shadegenbm').innerHTML=("Gradient rendered in " + (new Date()-go) + " ms with a blue value of " + (Math.round(seed*1000)/1000));
+	document.getElementById('shadegenbm').innerHTML=(`Gradient rendered in ${(new Date()-go)} ms with a blue value of ${Math.round(seed*1000)/1000}`);
 }
 
 function save(){
