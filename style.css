@@ -11,3 +11,11 @@ body {
 p {
 	margin:0;
 }
+
+table {
+  table-layout: fixed ;
+  width: 100% ;
+}
+td {
+  width: 50% ;
+}

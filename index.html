@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>helo</title>
 		<link rel='stylesheet' href='style.css'></link>
 		<script src='libs/gpu-browser.min.js'></script>
@@ -21,15 +22,24 @@
 					<p id='resolution'></p>
 					<p>The fist renders of the Mandelbrot set and the gradient will take longer than the succeeding, because the gpu kernel has to be compiled at the first render.</p>
 					<br>
-					<a href='mandelbrot'>gpu accelerated mandelbrot renderer</a><br>
-					<a href='logmap'>logmap renderer</a><br>
-					<a href='shadegen'>gpu accelerated gradient generator</a><br>
-					<a href='complex-slider'>a complex input slider</a><br>
-					<a href='everything-formula/encode'>Tupper's formula encoder</a><br>
-					<a href='everything-formula/decode'>Tupper's formula renderer</a><br>
-					<a href='SaRcAsM-tYpE'>A tool to generate "sArCaStIc" text</a><br>
-					<a href='https://github.com/arte921'>My github page</a><br>
-					<a href='https://play.google.com/store/apps/developer?id=arte921'>My play store page</a>
+					<table>
+						<tr>
+							<td><a href='mandelbrot'>gpu accelerated mandelbrot renderer</a></td>
+							<td><a href='logmap'>logmap renderer</a></td>
+						</tr><tr>
+							<td><a href='SaRcAsM-tYpE'>A tool to generate "sArCaStIc" text</a></td>
+							<td><a href='complex-slider'>a complex input slider</a></td>
+						</tr><tr>							
+							<td><a href='everything-formula/encode'>Tupper's formula encoder</a></td>
+							<td><a href='everything-formula/decode'>Tupper's formula renderer</a></td>
+						</tr><tr>
+							<td><a href='shadegen'>gpu accelerated gradient generator</a></td>
+							<td><a href='caster'>raycaster</a></td>
+						</tr><tr>
+							<td><a href='https://github.com/arte921'>My github page</a></td>
+							<td><a href='https://play.google.com/store/apps/developer?id=arte921'>My play store page</a></td>
+						</tr>
+					</table>
 				</td><td id='tdshadegen'></td>
 			</tr>
 		</table>
